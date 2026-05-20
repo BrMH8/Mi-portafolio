@@ -231,6 +231,28 @@ section {
 }
 .btn-outline:hover { border-color: var(--accent); background: rgba(200,169,110,0.06); }
 
+.btn-download {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 2px;
+  border: 1px solid rgba(124,110,247,0.25);
+  background: rgba(124,110,247,0.12);
+  color: var(--accent2);
+  font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.3s, background 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.btn-download svg {
+  width: 1rem; height: 1rem;
+}
+.btn-download:hover {
+  transform: translateY(-2px);
+  background: rgba(124,110,247,0.2);
+  border-color: rgba(200,169,110,0.35);
+  box-shadow: 0 14px 35px rgba(124,110,247,0.18);
+}
+.btn-outline:hover { border-color: var(--accent); background: rgba(200,169,110,0.06); }
+
 .section-header { text-align: center; margin-bottom: 4rem; }
 .section-label {
   font-size: 0.7rem; letter-spacing: 0.35em;
@@ -817,17 +839,19 @@ section {
   .mobile-menu { display:flex; }
   .cursor, .cursor-ring { display:none; }
   .hero-actions { gap: 1.25rem; }
-  .btn-primary, .btn-outline { padding: 1rem 1.75rem; font-size: 0.85rem; }
+  .btn-primary, .btn-download, .btn-outline { padding: 1rem 1.75rem; font-size: 0.85rem; }
 }
 
 @media (max-width: 640px) {
   .hero-actions { flex-direction: column; gap: 1rem; }
-  .btn-primary, .btn-outline { width: 100%; justify-content: center; padding: 1.1rem 1.5rem; font-size: 0.9rem; }
+  .btn-primary, .btn-download, .btn-outline { width: 100%; justify-content: center; padding: 1.1rem 1.5rem; font-size: 0.9rem; }
 }
 
 @media (max-width: 480px) {
   .stats-grid { grid-template-columns:1fr 1fr; }
-  .hero-actions { flex-direction:column; gap: 0.9rem; }
-  .btn-primary, .btn-outline { width: 100%; justify-content: center; padding: 1.2rem 1.5rem; font-size: 0.95rem; }
+  .hero-actions { flex-direction:column; gap: 0.9rem; align-items: stretch; }
+  .hero-actions > * { width: 100%; }
+  .btn-primary, .btn-outline, .btn-download { width: 100%; justify-content: center; padding: 1.2rem 1.5rem; font-size: 0.95rem; border-radius: 6px; }
+  .btn-primary svg, .btn-outline svg, .btn-download svg { width: 1.1rem; height: 1.1rem; }
   .site-footer { flex-direction:column; gap:0.5rem; text-align:center; }
 }
