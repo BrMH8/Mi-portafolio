@@ -4,13 +4,13 @@ export default function Hero() {
 
   const downloadCv = async (e) => {
     e.preventDefault()
-    const url = "https://mojhlknihvhjxkxopvim.supabase.co/storage/v1/object/sign/Music/CvBrMH.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9iNDQ4NWFhZi1iMTcwLTRiMmMtOTY0ZC04Nzk2NzY4YTJjOGQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNdXNpYy9DdkJyTUgucGRmIiwiaWF0IjoxNzc5MzE3ODM0LCJleHAiOjE4NDIzODk4MzR9.Daxk4Z6myc0PN1MQ9ftpgzyEYUo-4BU1QYZ-s2mybp0"
+    const url = "https://mojhlknihvhjxkxopvim.supabase.co/storage/v1/object/sign/Music/CV_BryanMH.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9iNDQ4NWFhZi1iMTcwLTRiMmMtOTY0ZC04Nzk2NzY4YTJjOGQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNdXNpYy9DVl9Ccnlhbk1ILnBkZiIsImlhdCI6MTc4MDM0MjU1NCwiZXhwIjoyMDMyNjMwNTU0fQ.r5a45jopZyGvB_gmNwpkgMAd1anfXzcOhkznHaoaJlY"
 
     try {
       const res = await fetch(url)
       if (!res.ok) throw new Error('Network response was not ok')
       const blob = await res.blob()
-      const filename = 'CvBrMH.pdf'
+      const filename = 'CV_BryanMH.pdf'
       const blobUrl = URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = blobUrl
@@ -60,7 +60,7 @@ export default function Hero() {
           >
             Contactar
           </button>
-          <a className="btn-download" href="https://mojhlknihvhjxkxopvim.supabase.co/storage/v1/object/sign/Music/CvBrMH.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9iNDQ4NWFhZi1iMTcwLTRiMmMtOTY0ZC04Nzk2NzY4YTJjOGQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNdXNpYy9DdkJyTUgucGRmIiwiaWF0IjoxNzc5MzE3ODM0LCJleHAiOjE4NDIzODk4MzR9.Daxk4Z6myc0PN1MQ9ftpgzyEYUo-4BU1QYZ-s2mybp0" onClick={downloadCv} rel="noreferrer noopener" download>
+          <a className="btn-download" href="https://mojhlknihvhjxkxopvim.supabase.co/storage/v1/object/sign/Music/CV_BryanMH.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9iNDQ4NWFhZi1iMTcwLTRiMmMtOTY0ZC04Nzk2NzY4YTJjOGQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNdXNpYy9DVl9Ccnlhbk1ILnBkZiIsImlhdCI6MTc4MDM0MjU1NCwiZXhwIjoyMDMyNjMwNTU0fQ.r5a45jopZyGvB_gmNwpkgMAd1anfXzcOhkznHaoaJlY" onClick={downloadCv} rel="noreferrer noopener" download>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
@@ -84,7 +84,7 @@ export default function Hero() {
               <span className="card-tag">Node.js</span>
               <span className="card-tag">Design</span>
             </div>
-            <div className="card-name">Bryan Martinez</div>
+            <div className="card-name">Ing. Bryan Martinez</div>
             <div className="card-role">Desarrollador Web · Diseñador UI</div>
           </div>
         </div>
